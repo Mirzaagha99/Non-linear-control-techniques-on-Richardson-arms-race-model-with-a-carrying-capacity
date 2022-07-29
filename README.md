@@ -1,17 +1,18 @@
 # Non-linear-control-techniques-on-Richardson-arms-race-model-with-a-carrying-capacity
-The purpose of this study is the implementation of one of the best known mathematical models in the war sector: "Richardson Arms Race Model". Richiardson was a physicist who served for the French medical corps during the First World War, shocked by the events of the war, he created a model that could predict the arms race between nations close to conflict, analyzing how the accumulation of arms of one country influences the accumulation of arms of the other. This work will focus on a variation of Richiardson's original model, in fact it will also take into consideration budget constraints to be respected.
+
+
 This model analyzes how in a war scenario, the accumulation of weapons of one state $𝑋_1$ influences the accumulation of weapons of the other state $𝑋_2$. The equations that describe the model are:
 
-This model analyzes how in a war scenario, the accumulation of weapons of one state 𝑋_1 influences the accumulation of weapons of the other state 𝑋_2. The equations that describe the model are:
-The model in question considers 2 nations 𝑋_1 and 𝑋_2 that decide to vary their military expenses (𝑥_1 and
-𝑥_2).
-The dimensionless positive constants a and b represent the "fear" that countries 𝑋_1 and 𝑋_2 feel towards the other country.
-The dimensionless positive constants m and n indicate the "reluctance" of countries to invest in the military sector.
-The "resentment / friendliness" or the r and s variables can be positive or negative, they reflect the hostile or peaceful character of one country towards the other country.
-𝒙_𝟏𝒎𝒂𝒙 and 𝒙_𝟐𝒎𝒂𝒙 are constants that represent the budget constraints imposed on armaments 𝑋_1 and 𝑋_2
-In order to carry out the analysis and control of the system, the variables representing resentment / friendliness will be considered as inputs to the system. Since this variable is conceptually a "reciprocal" behavior, it may be reasonable to assume that r = s (conceptually it means that the two countries feel the same estimate for each other). So with the assumptions asserted, the model becomes
+
+The model in question considers 2 nations $𝑋_1$ and $𝑋_2$ that decide to vary their military expenses ($𝑥_1$ and $𝑥_2$).
+- The dimensionless positive constants $a$ and $b$ represent the "fear" that countries 𝑋_1 and 𝑋_2 feel towards the other country.
+- The dimensionless positive constants m and n indicate the "reluctance" of countries to invest in the military sector.
+- The "resentment / friendliness" or the r and s variables can be positive or negative, they reflect the hostile or peaceful character of one country towards the other country.
+- $𝒙_{𝟏𝒎𝒂𝒙}$ and $𝒙_{𝟐𝒎𝒂𝒙}$ are constants that represent the budget constraints imposed on armaments $𝑋_1$ and $𝑋_2$
+
+In order to carry out the analysis and control of the system, the variables representing resentment / friendliness will be considered as inputs to the system. Since this variable is conceptually a "reciprocal" behavior, it may be reasonable to assume that $r = s$ (conceptually it means that the two countries feel the same estimate for each other). So with the assumptions asserted, the model becomes
 ![2](https://user-images.githubusercontent.com/101321796/181657131-0ac9b3f6-7264-409e-b5f1-b7d777609bba.jpg)
-The values ​​of the parameters chosen are a = 1, b = 2, m = 0.5, n = 0.2, 𝒙_𝟏𝒎𝒂𝒙 = 5 and 𝒙_𝟐𝒎𝒂𝒙 = 10
+The values ​​of the parameters chosen are a = 1, b = 2, m = 0.5, n = 0.2, $𝒙_{𝟏𝒎𝒂𝒙}$ = 5 and $𝒙_{𝟐𝒎𝒂𝒙}$ = 10
 With the chosen parameters, 2 equilibrium points are obtained in (0,0) and (5,10). It is interesting to understand how as the parameter b changes, both the number of equilibrium points and their nature can change.
 Using the Matlab solve command, we obtain that for b≤0.4, it admits a new equilibrium point.
 Below is a table that summarizes how as b changes, the nature of the equilibrium point changes
@@ -35,13 +36,20 @@ The inversion of stability of 2 equilibrium points at a given value a * is a typ
 ![7](https://user-images.githubusercontent.com/101321796/181657139-593f7434-743e-4d8a-9321-c5731d40fbf1.jpg)
 ![8](https://user-images.githubusercontent.com/101321796/181657140-bcf3dbb6-5f81-4bb9-94b0-ced72a9e3a4e.jpg)
 
+
+
+
+
+
 The purpose of the control design is to bring state X1's military spending to a sustained and constant value of € 1 billion.
-We linearize around the equilibrium point (0,0).
-LQ control with integrator with Q = [10000,1,10000] and R = 1
-The reference is 1
-We apply parametric variation of 10%
-A disturbance of dimension -0.3 is introduced at instant 10.
-The response is able to reach full speed in about 4s with zero error and without percentage overshoot
+- We linearize around the equilibrium point (0,0).
+- LQ control with integrator with Q = [10000,1,10000] and R = 1
+- The reference is 1
+- We apply parametric variation of 10%
+- A disturbance of dimension -0.3 is introduced at instant 10.
+- The response is able to reach full speed in about 4s with zero error and without percentage overshoot
+
+
 ![9](https://user-images.githubusercontent.com/101321796/181657143-b73ab500-1341-4aa8-a494-570c62ead0a1.jpg)
 ![10](https://user-images.githubusercontent.com/101321796/181657145-fbc71646-01c3-415e-9751-15adcb9d6175.jpg)
 
@@ -49,13 +57,13 @@ Validation of the LQ controller on the non-linear model
 ![11](https://user-images.githubusercontent.com/101321796/181657146-713458c5-9ee0-4c08-8d04-8c6cc066315d.jpg)
 ![12](https://user-images.githubusercontent.com/101321796/181657147-88a6f694-b1a3-430c-9add-814daeb08644.jpg)
 
-More specific control for non-linear systems
-Presence of an internal dynamic on x2
-The problem with I / O FBL is robustness
+- More specific control for non-linear systems
+- Presence of an internal dynamic on x2
+- The problem with I / O FBL is robustness
 ![13](https://user-images.githubusercontent.com/101321796/181657149-a2562340-eeb7-4bb6-bd12-5472c0633148.jpg)
 ![14](https://user-images.githubusercontent.com/101321796/181657150-8c7b2296-8a35-4949-a8be-2dbb4957485b.jpg)
-This method solves the problems of parmatric disturbances and variation.
-Earnings 𝑘_𝑝 = 20 𝑒 𝑘_𝑖 = 10
+- This method solves the problems of parmatric disturbances and variation.
+- Earnings 𝑘_𝑝 = 20 𝑒 𝑘_𝑖 = 10
 ![15](https://user-images.githubusercontent.com/101321796/181657153-4606374f-c32e-4032-81a1-d372de1cbe04.jpg)
 ![16](https://user-images.githubusercontent.com/101321796/181657154-d642fd21-f4de-4a4b-8df1-369e9802b253.jpg)
 This model is one of the most famous in the military field, because it allows, with a small number of parameters, to predict in a realistic way the war expenses due to conflicts between states.
