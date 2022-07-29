@@ -51,8 +51,9 @@ For all the values of b, it is easy to deduce that the system does not admit lim
  
  ## Bifurcation analysis
 varying the parameter a, a new equilibrium point is added for a ≤1 / 4. In the following table the equilibrium points are classified as a varies
-for a = 1/20 the first equilibrium point goes from stable node to saddle point, while the third equilibrium point does the opposite
-for a = 1/4 the second equilibrium point goes from saddle point to stable node, while the third equilibrium point does the opposite.
+- for a = 1/20 the first equilibrium point goes from stable node to saddle point, while the third equilibrium point does the opposite
+- for a = 1/4 the second equilibrium point goes from saddle point to stable node, while the third equilibrium point does the opposite.
+
 The inversion of stability of 2 equilibrium points at a given value a * is a typical behavior of transcritical bifurcations. By performing the simulation on Matcont, 2 bifurcations are reported to us in correspondence with the values ​​of a indicated above
  
 <p align="center">
