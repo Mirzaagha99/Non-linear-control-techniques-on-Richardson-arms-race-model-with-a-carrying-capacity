@@ -19,9 +19,9 @@ In order to carry out the analysis and control of the system, the variables repr
 The values ​​of the parameters chosen are a = 1, b = 2, m = 0.5, n = 0.2, $𝒙_{𝟏𝒎𝒂𝒙}$ = 5 and $𝒙_{𝟐𝒎𝒂𝒙}$ = 10
  
 ## Equilibrium points
-With the chosen parameters, 2 equilibrium points are obtained in (0,0) and (5,10). It is interesting to understand how as the parameter b changes, both the number of equilibrium points and their nature can change.
+With the chosen parameters, there are 2 equilibrium points in (0,0) and (5,10). It is interesting to understand how changing the parameter b, the number of equilibrium points and their nature can change.
 Using the Matlab solve command, we obtain that for b≤0.4, it admits a new equilibrium point.
-Below is a table that summarizes how as b changes, the nature of the equilibrium point changes
+Below is a table that summarizes how changing b, the nature of the equilibrium point changes
 The results obtained are completely consistent with what was obtained with Pplane
 
 
@@ -29,7 +29,7 @@ The results obtained are completely consistent with what was obtained with Pplan
  <img src="https://user-images.githubusercontent.com/101321796/181716911-ca91e8c1-c98d-4c7a-9bd3-c8f258bf45ba.jpg" width=50% height=50%>
  
  
-Portrait of the phases for b = 0.05, the equilibrium points are (0,0); (5,10); (5,1.25)
+Phase plane for b = 0.05: the equilibrium points are (0,0); (5,10); (5,1.25)
 <p align="center">  
  <img src="https://user-images.githubusercontent.com/101321796/181657133-5ded3068-9bf6-47b5-bd30-fd7777360589.jpg" width=50% height=50%> 
  
@@ -37,12 +37,12 @@ Portrait of the phases for b = 0.05, the equilibrium points are (0,0); (5,10); (
  
 
 
-Portrait of the phases for b = 0.2, the equilibrium points are (0,0); (5,10); (5,5)
+Phase plane for b = 0.2: the equilibrium points are (0,0); (5,10); (5,5)
 <p align="center">
  <img src="https://user-images.githubusercontent.com/101321796/181657136-148fe4a0-57cf-4f13-8eac-854d12b76632.jpg" width=50% height=50%>
  
 
-Portrait of the phases for b = 2 the equilibrium points are (0,0); (5,10);
+Phase plane for b = 2: the equilibrium points are (0,0); (5,10);
 <p align="center">
  <img src="https://user-images.githubusercontent.com/101321796/181657137-bc150eb9-1cb1-4ec5-b454-35e64f80c352.jpg" width=50% height=50%> 
 
@@ -50,9 +50,9 @@ Portrait of the phases for b = 2 the equilibrium points are (0,0); (5,10);
 For all the values of b, it is easy to deduce that the system does not admit limit cycles, because the Poincarè theorem is not respected, in fact N ≠ S + 1 where N is the number of foci, nodes, repulsors and centers and S the number of saddles;
  
  ## Bifurcation analysis
-As the parameter a changes, a new equilibrium point is added for a ≤1 / 4. In the following table the equilibrium points are classified as a varies
-for a = 1/20 the first equilibrium point goes from stable knot to saddle, while the third equilibrium point does the opposite
-for a = 1/4 the second equilibrium point goes from saddle to stable node, while the third equilibrium point does the opposite.
+varying the parameter a, a new equilibrium point is added for a ≤1 / 4. In the following table the equilibrium points are classified as a varies
+for a = 1/20 the first equilibrium point goes from stable node to saddle point, while the third equilibrium point does the opposite
+for a = 1/4 the second equilibrium point goes from saddle point to stable node, while the third equilibrium point does the opposite.
 The inversion of stability of 2 equilibrium points at a given value a * is a typical behavior of transcritical bifurcations. By performing the simulation on Matcont, 2 bifurcations are reported to us in correspondence with the values ​​of a indicated above
  
 <p align="center">
@@ -70,7 +70,7 @@ The inversion of stability of 2 equilibrium points at a given value a * is a typ
 
 ## LQ control on the linearized system
 
-The purpose of the control design is to bring state X1's military spending to a sustained and constant value of € 1 billion.
+The purpose of the control design is to bring state $X_1$ 's military spending to a sustained and constant value of € 1 billion.
 - We linearize around the equilibrium point (0,0).
 - LQ control with integrator with Q = [10000,1,10000] and R = 1
 - The reference is 1
@@ -113,6 +113,12 @@ Validation of the LQ controller on the non-linear model
 
 - This method solves the problems of parmatric disturbances and variation.
 - Earnings 𝑘_𝑝 = 20 𝑒 𝑘_𝑖 = 10
+The linear reference model chosen is:
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/101321796/181726433-1b9012b8-8ccb-4222-a0b4-ff59a5875f87.jpg" width=30% height=30%>
+
+
+
 <p align="center">
  <img src="https://user-images.githubusercontent.com/101321796/181657153-4606374f-c32e-4032-81a1-d372de1cbe04.jpg" width=50% height=50%>
 
@@ -125,7 +131,7 @@ All controls gave similar results, but the FBL I / O proved to be the least robu
 
  One of the difficulties present in this model is the presence of budget constraints, because this leads to the presence of new equilibrium points as the parameters vary
 
-Obviously this model is subject to some limits, due to the level of abstraction with which the analysis is being carried out, in fact neither some military aspects are taken into consideration, such as the possibility that other states may intervene during the conflict, nor other aspects. economic such as: inflation, economic sanctions imposed by other states or suspensions of trade agreements.
+Obviously this model is subject to some limits, due to the level of abstraction with which the analysis is being carried out, in fact neither some military aspects are taken into consideration, such as the possibility that other states may intervene during the conflict, nor other economic aspects such as: inflation, economic sanctions imposed by other states or suspensions of trade agreements.
 
 
  The events that involved Russia, Ukraine and NATO in 2022 highlight how the issues dealt with in this paper are still current and through a serious and in-depth study it is possible to increase the understanding of these phenomena and prevent catastrophic events.
