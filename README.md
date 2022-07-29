@@ -5,7 +5,7 @@ This model analyzes how in a war scenario, the accumulation of weapons of one st
 
 
 The model in question considers 2 nations $𝑋_1$ and $𝑋_2$ that decide to vary their military expenses ($𝑥_1$ and $𝑥_2$).
-- The dimensionless positive constants $a$ and $b$ represent the "fear" that countries 𝑋_1 and 𝑋_2 feel towards the other country.
+- The dimensionless positive constants $a$ and $b$ represent the "fear" that countries $𝑋_1$ and $𝑋_2$ feel towards the other country.
 - The dimensionless positive constants m and n indicate the "reluctance" of countries to invest in the military sector.
 - The "resentment / friendliness" or the r and s variables can be positive or negative, they reflect the hostile or peaceful character of one country towards the other country.
 - $𝒙_{𝟏𝒎𝒂𝒙}$ and $𝒙_{𝟐𝒎𝒂𝒙}$ are constants that represent the budget constraints imposed on armaments $𝑋_1$ and $𝑋_2$
@@ -129,7 +129,9 @@ Obviously this model is subject to some limits, due to the level of abstraction 
 
 
  The events that involved Russia, Ukraine and NATO in 2022 highlight how the issues dealt with in this paper are still current and through a serious and in-depth study it is possible to increase the understanding of these phenomena and prevent catastrophic events.
-
+## Code indications
 All simulink schemes are present in the "simulink_scheme" file, before simulating the schemes it is important to run the "linearized.m" file
 The analysis on the equilibrium points and on the open loop system are present in the file: "main.m".
 The bifurcation analysis is present in the file: "bifurcation.m"
+## Other Information
+For a more complete analysis in Italian read the pdf: "Richardson arms race model.pdf" or "Presentation of Richardson arms race model.pptx"
