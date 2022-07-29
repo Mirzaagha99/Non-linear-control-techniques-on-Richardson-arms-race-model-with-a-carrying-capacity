@@ -113,7 +113,7 @@ Validation of the LQ controller on the non-linear model
 ## MRAC with PI controller
 
 - This method solves the problems of parmatric disturbances and variation.
-- Earnings 𝑘_𝑝 = 20 𝑒 𝑘_𝑖 = 10
+- Earnings $𝑘_𝑝$ = 20 𝑒 $𝑘_𝑖$ = 10
 The linear reference model chosen is:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/101321796/181726433-1b9012b8-8ccb-4222-a0b4-ff59a5875f87.jpg" width=30% height=30%>
