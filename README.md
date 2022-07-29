@@ -1,6 +1,6 @@
 # Non-linear-control-techniques-on-Richardson-arms-race-model-with-a-carrying-capacity
 
-
+## Introduction
 This model analyzes how in a war scenario, the accumulation of weapons of one state $𝑋_1$ influences the accumulation of weapons of the other state $𝑋_2$. The equations that describe the model are:
 
 
@@ -17,6 +17,8 @@ In order to carry out the analysis and control of the system, the variables repr
  
 
 The values ​​of the parameters chosen are a = 1, b = 2, m = 0.5, n = 0.2, $𝒙_{𝟏𝒎𝒂𝒙}$ = 5 and $𝒙_{𝟐𝒎𝒂𝒙}$ = 10
+ 
+## Equilibrium points
 With the chosen parameters, 2 equilibrium points are obtained in (0,0) and (5,10). It is interesting to understand how as the parameter b changes, both the number of equilibrium points and their nature can change.
 Using the Matlab solve command, we obtain that for b≤0.4, it admits a new equilibrium point.
 Below is a table that summarizes how as b changes, the nature of the equilibrium point changes
@@ -46,6 +48,8 @@ Portrait of the phases for b = 2 the equilibrium points are (0,0); (5,10);
 
 
 For all the values of b, it is easy to deduce that the system does not admit limit cycles, because the Poincarè theorem is not respected, in fact N ≠ S + 1 where N is the number of foci, nodes, repulsors and centers and S the number of saddles;
+ 
+ ## Bifurcation analysis
 As the parameter a changes, a new equilibrium point is added for a ≤1 / 4. In the following table the equilibrium points are classified as a varies
 for a = 1/20 the first equilibrium point goes from stable knot to saddle, while the third equilibrium point does the opposite
 for a = 1/4 the second equilibrium point goes from saddle to stable node, while the third equilibrium point does the opposite.
@@ -64,7 +68,7 @@ The inversion of stability of 2 equilibrium points at a given value a * is a typ
 
 
 
-
+## LQ control on the linearized system
 
 The purpose of the control design is to bring state X1's military spending to a sustained and constant value of € 1 billion.
 - We linearize around the equilibrium point (0,0).
@@ -82,7 +86,7 @@ The purpose of the control design is to bring state X1's military spending to a 
  <img src="https://user-images.githubusercontent.com/101321796/181657145-fbc71646-01c3-415e-9751-15adcb9d6175.jpg" width=60% height=60%>
  
 
-
+## LQ control on the non-linear system
 
 Validation of the LQ controller on the non-linear model
 <p align="center">
@@ -91,6 +95,7 @@ Validation of the LQ controller on the non-linear model
 <p align="center">
  <img src="https://user-images.githubusercontent.com/101321796/181657147-88a6f694-b1a3-430c-9add-814daeb08644.jpg" width=60% height=60%>
  
+## I/O FEEDBACK LINEARIZATION
 
 - More specific control for non-linear systems
 - Presence of an internal dynamic on x2
@@ -104,6 +109,7 @@ Validation of the LQ controller on the non-linear model
  <img src="https://user-images.githubusercontent.com/101321796/181657150-8c7b2296-8a35-4949-a8be-2dbb4957485b.jpg" width=60% height=60%>
  
  
+## MRAC with PI controller
 
 - This method solves the problems of parmatric disturbances and variation.
 - Earnings 𝑘_𝑝 = 20 𝑒 𝑘_𝑖 = 10
@@ -113,6 +119,7 @@ Validation of the LQ controller on the non-linear model
 <p align="center">
  <img src="https://user-images.githubusercontent.com/101321796/181657154-d642fd21-f4de-4a4b-8df1-369e9802b253.jpg" width=60% height=60%>
 
+ ## Conclusions
 This model is one of the most famous in the military field, because it allows, with a small number of parameters, to predict in a realistic way the war expenses due to conflicts between states.
 All controls gave similar results, but the FBL I / O proved to be the least robust to noise and parametric variations.
 
