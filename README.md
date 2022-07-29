@@ -76,4 +76,6 @@ Obviously this model is subject to some limits, due to the level of abstraction 
 
  The events that involved Russia, Ukraine and NATO in 2022 highlight how the issues dealt with in this paper are still current and through a serious and in-depth study it is possible to increase the understanding of these phenomena and prevent catastrophic events.
 
-
+All simulink schemes are present in the "simulink_scheme" file, before simulating the schemes it is important to run the "linearized.m" file
+The analysis on the equilibrium points and on the open loop system are present in the file: "main.m".
+The bifurcation analysis is present in the file: "bifurcation.m"
